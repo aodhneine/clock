@@ -9,14 +9,22 @@
       --dark-bg: #1c1c1c;
     }
 
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
     div {
       display: grid;
       grid-template-columns: repeat(3, 33vw);
-      grid-template-rows: repeat(3, 25vh);
-      text-align: center;
+      grid-template-rows: repeat(3, 33vh);
     }
 
     p {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
       grid-column: 2;
       grid-row: 2;
       font-size: 10em;
