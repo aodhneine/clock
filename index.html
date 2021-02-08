@@ -54,7 +54,7 @@
     const setTime = (element) => {
       const now = Date.now();
       const format = { hour: "numeric", minute: "numeric", second: "numeric" };
-      const date = new Intl.DateTimeFormat("en", format).format(now);
+      const date = new Intl.DateTimeFormat("en-GB", format).format(now);
       element.textContent = `${date}`;
     };
     let clockElement = document.querySelector("#clock");
