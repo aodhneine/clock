@@ -1,8 +1,25 @@
 <!doctype html>
 <head>
   <title>Clock</title>
+  <style>
+    div {
+      display: grid;
+      grid-template-columns: repeat(3, 33vw);
+      grid-template-rows: repeat(3, 25vh);
+      text-align: center;
+    }
+
+    p {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 10em;
+      font-family: monospace;
+    }
+  </style>
 </head>
-  <p id="clock">00:00:00</p>
+  <div>
+    <p id="clock">00:00:00</p>
+  </div>
 
   <script>
     const setTime = (element) => {
