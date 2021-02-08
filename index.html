@@ -1,0 +1,18 @@
+<!doctype html>
+<head>
+  <title>Clock</title>
+</head>
+  <p id="clock">00:00:00</p>
+
+  <script>
+    const setTime = (element) => {
+      const now = Date.now();
+      const format = { hour: "numeric", minute: "numeric", second: "numeric" };
+      const date = new Intl.DateTimeFormat("en", format).format(now);
+      element.textContent = `${date}`;
+    };
+    let clockElement = document.querySelector("#clock");
+    setTime(clockElement);
+    setInterval(() => setTime(clockElement), 1000);
+  </script>
+</html>
