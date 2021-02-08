@@ -2,6 +2,13 @@
 <head>
   <title>Clock</title>
   <style>
+    :root {
+      --light-fg: #000000;
+      --light-bg: #fcfcfc;
+      --dark-fg: #fcfcfc;
+      --dark-bg: #1c1c1c;
+    }
+
     div {
       display: grid;
       grid-template-columns: repeat(3, 33vw);
@@ -14,6 +21,20 @@
       grid-row: 2;
       font-size: 10em;
       font-family: monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: var(--dark-fg);
+        background-color: var(--dark-bg);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        color: var(--light-fg);
+        background-color: var(--light-bg);
+      }
     }
   </style>
 </head>
